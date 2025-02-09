@@ -2,20 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../src/components/Navbar"; // Import Navbar component
 import Home from "../src/pages/Home";
-import About from "../src/pages/About";
 import OurStory from "../src/pages/about/OurStory";
 import Team from "../src/pages/about/Team";
 import Mission from "../src/pages/about/Mission";
-import JobBoard from "../src/pages/JobBoard";
 import BrowseJobs from "../src/pages/jobs/BrowseJobs";
 import PostJob from "../src/pages/jobs/PostJobs";
 import SavedJobs from "../src/pages/jobs/SavedJobs";
-import AlumniStories from "../src/pages/AlumniStories";
 import SuccessStories from "../src/pages/stories/SuccessStories";
 import Interviews from "../src/pages/stories/Interviews";
 import ShareStory from "../src/pages/stories/ShareStory";
 import Contact from "../src/pages/Contact";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import logo from "../src/assets/ConnectULogo.png";
 
 const App = () => {
@@ -70,11 +68,9 @@ const App = () => {
       {/* Main content, rendered based on the route */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/jobs" element={<JobBoard />} />
-        <Route path="/stories" element={<AlumniStories />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         {/* Sub-routes for "About" */}
         <Route path="/about/story" element={<OurStory />} />
