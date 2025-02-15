@@ -2,9 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../src/components/Navbar"; // Import Navbar component
 import Home from "../src/pages/Home";
-import OurStory from "../src/pages/about/OurStory";
-import Team from "../src/pages/about/Team";
-import Mission from "../src/pages/about/Mission";
+import AboutUs from "./pages/ABoutUs";
 import BrowseJobs from "../src/pages/jobs/BrowseJobs";
 import PostJob from "../src/pages/jobs/PostJobs";
 import SavedJobs from "../src/pages/jobs/SavedJobs";
@@ -15,6 +13,7 @@ import Contact from "../src/pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import logo from "../src/assets/ConnectULogo.png";
+import Footer from "./components/Footer";
 
 const App = () => {
   // Navigation items configuration (for passing to Navbar)
@@ -24,12 +23,8 @@ const App = () => {
       href: "/",
     },
     {
-      label: "About",
-      subItems: [
-        { label: "Our Story", href: "/about/story" },
-        { label: "Team", href: "/about/team" },
-        { label: "Mission", href: "/about/mission" },
-      ],
+      label: "About Us",
+      href: "/about",
     },
     {
       label: "Job Board",
@@ -71,11 +66,9 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<AboutUs />} />
 
-        {/* Sub-routes for "About" */}
-        <Route path="/about/story" element={<OurStory />} />
-        <Route path="/about/team" element={<Team />} />
-        <Route path="/about/mission" element={<Mission />} />
+        
 
         {/* Sub-routes for "Job Board" */}
         <Route path="/jobs/browse" element={<BrowseJobs />} />
@@ -87,7 +80,9 @@ const App = () => {
         <Route path="/stories/interviews" element={<Interviews />} />
         <Route path="/stories/share" element={<ShareStory />} />
       </Routes>
+      <Footer />
     </Router>
+
   );
 };
 
