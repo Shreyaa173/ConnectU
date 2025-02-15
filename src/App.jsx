@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../src/components/Navbar"; // Import Navbar component
 import Home from "../src/pages/Home";
-import AboutUs from "./pages/ABoutUs";
+import AboutUs from "./pages/AboutUs";
 import BrowseJobs from "../src/pages/jobs/BrowseJobs";
 import PostJob from "../src/pages/jobs/PostJobs";
 import SavedJobs from "../src/pages/jobs/SavedJobs";
